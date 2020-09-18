@@ -1,0 +1,36 @@
+name: 'generate-changelog-action'
+description: 'GitHub action to automatically publish a NPM package into Azure Artifacts'
+author: 'Javier Bullrich'
+inputs:
+  package-dir:
+    description: 'The path for the package.json if it is not in root'
+    required: false
+    default: '.'
+  npm-email:
+    description: 'Required email to upload the npm package'
+    required: true
+  organization:
+    description: 'Value which replaces "<yourOrganization>" in the .npmrc file'
+    required: true
+  feed:
+    description: 'Value which replaces "<yourFeed>" in the .npmrc file'
+    required: true
+  username:
+    description: 'Any value but not an empty string'
+    required: true
+  base64-token:
+    description: 'Value which replaces [BASE64_ENCODED_PERSONAL_ACCESS_TOKEN] in the .npmrc file'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.package-dir }}
+    - ${{ inputs.npm-email }}
+    - ${{ inputs.organization }}
+    - ${{ inputs.feed }}
+    - ${{ inputs.username }}
+    - ${{ inputs.base64-token }}
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
