@@ -1,0 +1,8 @@
+title:
+    patterns:
+      - >-
+        ^(breaking|build|ci|chore|docs|feat|fix|other|perf|refactor|revert|style|test)\(.+\):\s.+$
+    error: >-
+      Title must have a type. For more information see
+      https://github.com/lob/generate-changelog/#usage
+  version: 1
