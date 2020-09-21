@@ -1,6 +1,6 @@
 name: 'generate-changelog-action'
 description: 'GitHub action to automatically publish a NPM package into Azure Artifacts'
-author: 'Javier Bullrich'
+author: 'Innerspace GmbH'
 inputs:
   package-dir:
     description: 'The path for the package.json if it is not in root'

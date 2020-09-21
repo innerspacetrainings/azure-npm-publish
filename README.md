@@ -20,8 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: innerspacetrainings/azure-npm-publish@master
-        env:
-          REPO: ${{ github.repository }}
         with:
           package-dir: 'Custom/directory'
           npm-email: 'my-microsoft@email.com'
