@@ -1,4 +1,4 @@
-name: 'generate-changelog-action'
+name: 'azure-npm-publish'
 description: 'GitHub action to automatically publish a NPM package into Azure Artifacts'
 author: 'Innerspace GmbH'
 inputs:
